@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------------------
-* Author        : Awaiken
+* Auth.r        : Awaiken
 * Template Name : Inspaire - Architecture and Interior Design HTML Template
 * File          : CSS File
 * Version       : 1.0
@@ -42,7 +42,7 @@
 	--primary-color			: #192324;
 	--secondery-color		: #F8F8F8;
 	--text-color			: #283132;
-	--accent-color			: #7C877F;
+	--accent-color			: #1a438b;
 	--white-color			: #FFFFFF;
 	--divider-color			: #EAF0EC;
 	--dark-divider-color	: #FFFFFF1A;
@@ -396,7 +396,6 @@ body{
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	margin-bottom: 0;
-	cursor: none;
 }
 
 .section-title h2{
@@ -404,7 +403,6 @@ body{
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	margin-bottom: 0;
-	cursor: none;
 }
 
 .section-title h1 span,
@@ -1298,7 +1296,7 @@ header.main-header .header-sticky.active .navbar{
 
 .service-image a{
 	display: block;
-	cursor: none;
+	cursor: pointer;
 }
 
 .service-image a figure::before{
@@ -1319,11 +1317,11 @@ header.main-header .header-sticky.active .navbar{
 	width: 100%;
 	object-fit: cover;
 	aspect-ratio: 1 / 1.36;
-	transition: all 0.7s ease;
+	transition: all 1s ease;
 	transform-style: preserve-3d;
 }
 
-.service-item:hover .service-image img{
+.service-item:hover .service-image img {
 	transform: rotateY(180deg)
 }
 
@@ -1352,7 +1350,7 @@ header.main-header .header-sticky.active .navbar{
 .service-btn a img{
 	max-width: 20px;
 	transform: rotate(-45deg);
-	transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease;
 }
 
 .service-btn a:hover img{
@@ -1366,6 +1364,7 @@ header.main-header .header-sticky.active .navbar{
 	right: 40px;
 	z-index: 1;
 }
+
 
 .service-content h3{
 	font-size: 20px;
@@ -1404,7 +1403,7 @@ header.main-header .header-sticky.active .navbar{
 
 .intro-video-image a{
 	display: block;
-	cursor: none;
+	cursor: pointer;
 }
 
 .intro-video-image figure::before{
@@ -1448,7 +1447,7 @@ header.main-header .header-sticky.active .navbar{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	cursor: none;
+	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -1526,6 +1525,7 @@ header.main-header .header-sticky.active .navbar{
 	margin-bottom: 30px;
 }
 
+
 .project-featured-image figure::before{
 	content: '';
 	position: absolute;
@@ -1537,6 +1537,15 @@ header.main-header .header-sticky.active .navbar{
 	height: 100%;
 	background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 111.33%);
 	z-index: 0;
+}
+
+
+.project-featured-image {
+	transition: transform 0.3s ease-in-out;
+}
+
+.project-featured-image:hover {
+	transform: scale(1.1); /* Increases size by 10% */
 }
 
 .project-btn{
@@ -1624,7 +1633,7 @@ header.main-header .header-sticky.active .navbar{
 /************************************/
 
 .how-we-work{
-	background: var(--primary-color);
+	background: var(--accent-color);
 	padding: 100px 0;
 }
 
@@ -1825,7 +1834,7 @@ header.main-header .header-sticky.active .navbar{
 }
 
 .testimonial-slider .swiper-wrapper{
-	cursor: none;
+	cursor: pointer;
 }
 
 .testimonial-rating{
@@ -1931,7 +1940,7 @@ header.main-header .header-sticky.active .navbar{
 }
 
 .post-featured-image a{
-    cursor: none;
+    cursor: pointer;
 }
 
 .post-featured-image figure,
@@ -2001,7 +2010,7 @@ header.main-header .header-sticky.active .navbar{
 
 .main-footer{
 	padding: 0px 0 0;
-	background: var(--primary-color);
+	background: var(--accent-color);
 }
 
 .main-footer .footer-header{
@@ -2182,7 +2191,6 @@ header.main-header .header-sticky.active .navbar{
 .footer-copyright{
 	border-top: 1px solid var(--dark-divider-color);
 	text-align: center;
-	margin-top: 65px;
 	padding: 40px 0;
 }
 
@@ -2231,7 +2239,6 @@ header.main-header .header-sticky.active .navbar{
 	color: var(--white-color);
     letter-spacing: -0.02em;
     margin-bottom: 10px;
-    cursor: none;
 }
 
 .page-header-box ol{
@@ -2463,7 +2470,7 @@ header.main-header .header-sticky.active .navbar{
 
 .team-image a{
 	display: block;
-	cursor: none;
+	cursor: pointer;
 }
 
 .team-image figure{
@@ -3390,7 +3397,7 @@ header.main-header .header-sticky.active .navbar{
 .project-gallery-img a,
 .project-gallery-img figure{
     display: block;
-	cursor: none;
+	cursor: pointer;
 }
 
 .project-gallery-img figure img{
@@ -3413,7 +3420,7 @@ header.main-header .header-sticky.active .navbar{
 }
 
 .page-gallery-box .photo-gallery a{
-	cursor: none;
+	cursor: pointer;
 }
 
 .page-gallery-box .photo-gallery figure{
