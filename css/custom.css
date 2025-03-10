@@ -516,6 +516,7 @@ header.main-header .header-sticky.active .navbar {
   padding-right: 1em;
   color: #1a438b;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .main-menu ul li {
@@ -1080,9 +1081,13 @@ header.main-header .header-sticky.active .navbar {
   transform-style: preserve-3d;
 }
 
-.service-item:hover .service-image img {
+.service-image:hover img {
   transform: rotateY(180deg);
 }
+
+/* .service-item:hover .service-image img {
+  transform: rotateY(180deg);
+} */
 
 .service-content {
   position: absolute;
