@@ -669,7 +669,7 @@ header.main-header .header-sticky.active .navbar {
 /************************************/
 
 .hero {
-  /* position: relative; */
+  position: relative;
   background: url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -704,7 +704,7 @@ header.main-header .header-sticky.active .navbar {
 .hero.hero-slider-layout .hero-slide {
   position: relative;
   padding: 280px 0 250px;
-  height: 120vh;
+  height: 150vh;
 }
 
 .hero.hero-slider-layout .hero-slide::before {
@@ -727,17 +727,19 @@ header.main-header .header-sticky.active .navbar {
 
 .hero.hero-slider-layout .hero-slide .hero-slider-image {
   position: absolute;
-  top: 0;
+  top: 140px;
   right: 0;
   left: 0;
   bottom: 0;
 }
 
 .hero.hero-slider-layout .hero-slide .hero-slider-image img {
-  width: 100%;
+  /* width: 100%;
   height: 100%;
-  object-fit: cover;
-  height: 120vh;
+  height: 135vh; */
+  height: 100%;
+  /* object-fit: cover; */
+
 }
 
 .hero.hero-slider-layout .hero-pagination {
@@ -931,7 +933,7 @@ header.main-header .header-sticky.active .navbar {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   border-radius: 50%;
   height: 100%;
   width: 100%;
@@ -1044,80 +1046,59 @@ header.main-header .header-sticky.active .navbar {
   padding: 100px 0;
 }
 
-.service-item {
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height:280px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
   position: relative;
-  height: calc(100% - 30px);
-  margin-bottom: 30px;
-}
-
-.service-image a {
-  display: block;
-  cursor: pointer;
-}
-
-.service-image a figure::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(
-    360deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0) 105%
-  );
+  width: 100%;
   height: 100%;
-  width: 100%;
-  z-index: 1;
-  transition: all 0.3s ease-in-out;
-}
-
-.service-image img {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 1 / 1.36;
-  transition: all 1s ease;
+  text-align: center;
+  transition: transform 0.6s;
   transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.service-image:hover img {
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* .service-item:hover .service-image img {
-  transform: rotateY(180deg);
-} */
-
-.service-content {
+.flip-card-front, .flip-card-back {
   position: absolute;
-  bottom: 40px;
-  left: 40px;
-  right: 40px;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
 }
 
-.service-content h3 {
-  font-size: 20px;
-  text-transform: capitalize;
-  color: var(--white-color);
-  margin-bottom: 10px;
+.flip-card-front {
+  color: white;
 }
 
-.service-content h3 a {
-  color: inherit;
+.flip-card-back {
+  background-color: var(--accent-color);
+  color: white;
+  transform: rotateY(180deg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.service-content p {
-  color: var(--white-color);
-  margin-bottom: 0;
+.flip-card-back .card-text {
+  width: 80%;
+  margin: auto;
 }
 
 .all-services-btn {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 70px;
 }
-
 /************************************/
 /***      08. Intro Video css     ***/
 /************************************/
@@ -1277,13 +1258,13 @@ header.main-header .header-sticky.active .navbar {
   z-index: 0;
 }
 
-.project-featured-image {
+/* .project-featured-image {
   transition: transform 0.3s ease-in-out;
 }
 
 .project-featured-image:hover {
-  transform: scale(1.1); /* Increases size by 10% */
-}
+  transform: scale(1.1); 
+} */
 
 .project-btn {
   position: absolute;
@@ -1322,7 +1303,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .project-btn a:hover {
-  background: var(--primary-color);
+  background: var(--accent-color);
 }
 
 .project-btn a:hover img {
@@ -1492,17 +1473,38 @@ header.main-header .header-sticky.active .navbar {
 /************************************/
 /***      	14. Footer css 		  ***/
 /************************************/
+footer {
+  background-color: var(--accent-color);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
-.main-footer {
-  padding: 0px 0 0;
-  background: var(--accent-color);
+footer .footer-logo {
+  /* width: 180px; */
+  width: 190px;
+  height: 130px;
+}
+
+footer .quick-links ul li a {
+  color: white;
+}
+
+footer .quick-links ul li a:hover {
+  color: var(--primary-color);
+}
+
+footer .social-media a {
+  color: white;
+}
+
+footer .social-media a:hover {
+  color: var(--primary-color);
 }
 
 .footer-copyright {
-  border-top: 1px solid var(--dark-divider-color);
   text-align: center;
-  padding: 40px 0;
   display: flex;
+  padding-top: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -1510,7 +1512,7 @@ header.main-header .header-sticky.active .navbar {
 .footer-copyright-text p {
   color: var(--white-color);
   margin: 0;
-}
+  }
 
 /************************************/
 /***     15. About Us Page css 	  ***/
@@ -3057,7 +3059,8 @@ header.main-header .header-sticky.active .navbar {
   }
 
   .hero.hero-slider-layout .hero-slide .hero-slider-image img {
-    height: 80vh;
+    height: 100%;
+    object-fit: cover;
   }
 
   .hero.hero-slider-layout .hero-slide {
@@ -3079,6 +3082,10 @@ header.main-header .header-sticky.active .navbar {
     height: 80%;
     width: 100%;
     z-index: 1;
+  }
+
+  .hero.hero-slider-layout .hero-slide .hero-slider-image {
+    top: 110px;
   }
 
 
@@ -3196,6 +3203,10 @@ header.main-header .header-sticky.active .navbar {
     margin-left: 0;
   }
 
+  .flip-card {
+    margin-bottom: 40px;
+  }
+
   .our-services {
     padding: 50px 0;
   }
@@ -3302,22 +3313,22 @@ header.main-header .header-sticky.active .navbar {
     margin-top: 10px;
   }
 
-  .main-footer {
-    padding: 40px 0 0;
+
+  footer .footer-logo {
+    width: 110px;
+    height: 90px;
   }
 
-  .main-footer .footer-header {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+  footer .quick-links {
+    margin-top: 10px;
+  }
+  
+  footer .social-media {
+    margin-top: 10px;
   }
 
-  .footer-links {
-    padding-right: 0;
-    margin-bottom: 30px;
-  }
-
-  .footer-newsletter-form p {
-    margin-bottom: 20px;
+  footer .address {
+    margin-top: 10px;
   }
 
   .footer-copyright {
