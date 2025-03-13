@@ -738,8 +738,8 @@ header.main-header .header-sticky.active .navbar {
   height: 100%;
   height: 135vh; */
   height: 100%;
-  /* object-fit: cover; */
-
+  object-fit: cover;
+  width: 100%;
 }
 
 .hero.hero-slider-layout .hero-pagination {
@@ -777,7 +777,7 @@ header.main-header .header-sticky.active .navbar {
   font-size: 22px;
   color: var(--white-color);
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .hero-content .section-title h3::before {
@@ -1049,7 +1049,7 @@ header.main-header .header-sticky.active .navbar {
 .flip-card {
   background-color: transparent;
   width: 100%;
-  height:280px;
+  height: 280px;
   perspective: 1000px;
 }
 
@@ -1060,14 +1060,15 @@ header.main-header .header-sticky.active .navbar {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1088,6 +1089,7 @@ header.main-header .header-sticky.active .navbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .flip-card-back .card-text {
@@ -1098,78 +1100,6 @@ header.main-header .header-sticky.active .navbar {
 .all-services-btn {
   text-align: center;
   margin-top: 70px;
-}
-/************************************/
-/***      08. Intro Video css     ***/
-/************************************/
-
-.intro-video .container-fluid {
-  padding: 0;
-}
-
-.intro-video-box {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.intro-video-image a {
-  display: block;
-  cursor: pointer;
-}
-
-.intro-video-image figure::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(25, 35, 36, 0) 0%,
-    rgba(25, 35, 36, 0.6) 80.94%
-  );
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
-.intro-video-image img {
-  width: 100%;
-  aspect-ratio: 1 / 0.41;
-  object-fit: cover;
-}
-
-.video-play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.video-play-button a {
-  position: relative;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: capitalize;
-  color: var(--white-color);
-  border: 1px solid var(--white-color);
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.video-play-button a:hover {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
 }
 
 /************************************/
@@ -1476,7 +1406,7 @@ header.main-header .header-sticky.active .navbar {
 footer {
   background-color: var(--accent-color);
   padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 footer .footer-logo {
@@ -1505,6 +1435,7 @@ footer .social-media a:hover {
   text-align: center;
   display: flex;
   padding-top: 20px;
+  padding-bottom: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -1512,7 +1443,7 @@ footer .social-media a:hover {
 .footer-copyright-text p {
   color: var(--white-color);
   margin: 0;
-  }
+}
 
 /************************************/
 /***     15. About Us Page css 	  ***/
@@ -3006,8 +2937,6 @@ footer .social-media a:hover {
 /***      26. Responsive css      ***/
 /************************************/
 
-
-
 @media only screen and (max-width: 1024px) {
   .main-menu ul li {
     margin: 0;
@@ -3017,12 +2946,9 @@ footer .social-media a:hover {
     font-size: 14px;
   }
 
-
-
   .contact-infos {
     display: none;
   }
-
 
   .hero.hero-slider-layout .hero-slide .hero-slider-image img {
     height: 100vh;
@@ -3031,6 +2957,7 @@ footer .social-media a:hover {
   .hero.hero-slider-layout .hero-slide {
     height: 100vh;
   }
+
 }
 
 @media only screen and (max-width: 991px) {
@@ -3088,7 +3015,13 @@ footer .social-media a:hover {
     top: 110px;
   }
 
+  .intro-video {
+    height: 200px;
+  }
 
+  .intro-content {
+    height: 26vh;
+  }
 
   .responsive-menu,
   .navbar-toggle {
@@ -3160,7 +3093,10 @@ footer .social-media a:hover {
 
   .hero-content .section-title p {
     font-size: 20px;
+    text-align: left;
+    width: 100%;
   }
+
 
   .about-us {
     padding: 50px 0;
@@ -3178,10 +3114,6 @@ footer .social-media a:hover {
   .experience-counter h3 {
     font-size: 28px;
   }
-
- 
-
-
 
   .why-choose-us {
     padding: 50px 0;
@@ -3214,9 +3146,6 @@ footer .social-media a:hover {
   .service-image img {
     aspect-ratio: 1 / 1.2;
   }
-
-
-
 
   .service-content {
     bottom: 20px;
@@ -3260,10 +3189,6 @@ footer .social-media a:hover {
     padding: 50px 0;
   }
 
-
-
-
-
   .our-skill {
     padding: 50px 0;
   }
@@ -3281,22 +3206,6 @@ footer .social-media a:hover {
     margin: 0 auto;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .our-blog {
     padding: 50px 0;
   }
@@ -3313,7 +3222,6 @@ footer .social-media a:hover {
     margin-top: 10px;
   }
 
-
   footer .footer-logo {
     width: 110px;
     height: 90px;
@@ -3322,7 +3230,7 @@ footer .social-media a:hover {
   footer .quick-links {
     margin-top: 10px;
   }
-  
+
   footer .social-media {
     margin-top: 10px;
   }
@@ -3922,19 +3830,6 @@ footer .social-media a:hover {
     font-size: 38px;
   }
 
- 
-
-
-
-
-
-
-
-
-
-
-
-  
   .footer-copyright {
     padding: 15px 0;
   }
