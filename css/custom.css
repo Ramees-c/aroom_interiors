@@ -506,9 +506,7 @@ header.main-header .header-sticky.active .navbar {
   display: flex;
 }
 
-.contact-infos-hide {
-  display: none;
-}
+
 
 .contact-infos p,
 .contact-infos a {
@@ -517,6 +515,10 @@ header.main-header .header-sticky.active .navbar {
   color: #1a438b;
   margin-top: 10px;
   font-weight: bold;
+}
+
+.contact-infos a:hover {
+  color: var(--primary-color);
 }
 
 .main-menu ul li {
@@ -1422,6 +1424,15 @@ footer .quick-links ul li a {
 footer .quick-links ul li a:hover {
   color: var(--primary-color);
 }
+
+footer .address a {
+  color: white;
+}
+
+footer .address a:hover {
+  color: var(--primary-color);
+}
+
 
 footer .social-media a {
   color: white;
@@ -2983,6 +2994,11 @@ footer .social-media a:hover {
 
   .main-menu .nav-menu-wrapper {
     align-items: center;
+  }
+
+  .main-menu ul li a {
+    font-size: 20px;
+    font-weight: 500;
   }
 
   .hero.hero-slider-layout .hero-slide .hero-slider-image img {
