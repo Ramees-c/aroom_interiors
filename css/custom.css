@@ -707,7 +707,7 @@ header.main-header .header-sticky.active .navbar {
 .hero.hero-slider-layout .hero-slide {
   position: relative;
   padding: 280px 0 250px;
-  height: 150vh;
+  height: 160vh;
 }
 
 .hero.hero-slider-layout .hero-slide::before {
@@ -1386,6 +1386,135 @@ header.main-header .header-sticky.active .navbar {
   object-fit: cover;
 }
 
+
+/************************************/
+/***   12. Our Testimonials css   ***/
+/************************************/
+
+.our-testimonials{
+	background: var(--secondery-color);
+}
+
+.our-testimonials .container-fluid{
+	padding: 0;
+}
+
+.our-testimonials-image{
+	height: 100%;
+}
+
+.our-testimonials-image figure,
+.our-testimonials-image figure img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 0.82;
+    object-fit: cover;
+}
+
+.our-testimonial-content{
+	padding: 100px;
+}
+
+.our-testimonial-content .section-title{
+	background: url('../images/testimonial-quote.svg') no-repeat;
+	background-position: top right;
+	background-size: 162px auto;
+}
+
+.testimonial-slider{
+	width: 100%;
+	max-width: 620px;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid var(--divider-color);
+}
+
+.testimonial-slider .swiper-wrapper{
+	cursor: none;
+}
+
+.testimonial-rating{
+	margin-bottom: 20px;
+}
+
+.testimonial-rating i{
+	font-size: 18px;
+	color: var(--primary-color);
+	margin-right: 2px;
+}
+
+.testimonial-rating i:last-child{
+	margin-right: 0;
+}
+
+.testimonial-content{
+	margin-bottom: 40px;
+}
+
+.testimonial-content p{
+	font-size: 20px;
+	color: var(--primary-color);
+	margin: 0;
+}
+
+.testimonial-body{
+	display: flex;
+	align-items: center;
+}
+
+.testimonial-body .author-image{
+	margin-right: 15px;
+}
+
+.testimonial-body .author-image img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+.testimonial-body .author-content{
+	width: calc(100% - 75px);
+}
+
+.testimonial-body .author-content h3{
+	font-size: 20px;
+	text-transform: capitalize;
+}
+
+.testimonial-body .author-content p{
+	text-transform: capitalize;
+	margin: 0;
+}
+
+.testimonial-rating-counter{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.testimonial-rating-counter .rating-counter h2{
+	font-size: 58px;
+}
+
+.testimonial-client-rating{
+	display: inline-block;
+	background: var(--accent-color);
+    padding: 0px 5px 3px 5px;
+    line-height: 1em;
+}
+
+.testimonial-client-rating i{
+	font-size: 10px;
+	color: var(--white-color);
+}
+
+.testimonial-rating-content p{
+	color: var(--primary-color);
+	font-weight: 500;
+	margin: 0;
+}
+
+
 /************************************/
 /***       13. Our Blog css       ***/
 /************************************/
@@ -1436,11 +1565,26 @@ footer .address a:hover {
 
 
 footer .social-media a {
-  color: white;
+  color: var(--primary-color);
 }
 
-footer .social-media a:hover {
-  color: var(--primary-color);
+
+
+footer .icon-container {
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 40px; 
+  height: 40px; 
+  background-color: var(--divider-color);
+  border-radius: 50%;
+  font-size: 24px; 
+  transition: all 0.4s ease-in-out;
+}
+
+footer .social-media .icon-container:hover {
+  background-color: var(--accent-color);
+  cursor: pointer;
 }
 
 .footer-copyright {
@@ -1457,18 +1601,24 @@ footer .social-media a:hover {
   margin: 0;
 }
 
+
+
+
+
 /************************************/
 /***     15. About Us Page css 	  ***/
 /************************************/
 
 .page-header {
   position: relative;
-  background: url("../images/page-header-bg.jpg");
+  background: url("../images/462.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 270px 0 180px;
-  margin-top: -118px;
+  margin-top: 118px;
+  /* margin-top: 150px; */
+  height: 150vh;
 }
 
 .page-header::before {
@@ -1480,8 +1630,8 @@ footer .social-media a:hover {
   right: 0;
   background: linear-gradient(
     180deg,
-    rgba(25, 35, 36, 0) 0%,
-    rgba(25, 35, 36, 0.4) 80.94%
+    rgba(25, 35, 36, 0.637) 0%,
+    rgba(25, 35, 36, 0.571) 80.94%
   );
   width: 100%;
   height: 100%;
@@ -1558,7 +1708,7 @@ footer .social-media a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--primary-color);
+  background: var(--accent-color);
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -1599,7 +1749,7 @@ footer .social-media a:hover {
   padding: 100px 0 50px;
   background: linear-gradient(
     180deg,
-    var(--primary-color) 60%,
+    var(--accent-color) 60%,
     var(--white-color) 40%
   );
 }
@@ -1652,7 +1802,7 @@ footer .social-media a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--primary-color);
+  background: var(--accent-color);
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -2868,7 +3018,7 @@ footer .social-media a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--primary-color);
+  background: var(--accent-color);
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -2905,6 +3055,15 @@ footer .social-media a:hover {
 
 .contact-info-content p {
   margin-bottom: 0;
+}
+
+.contact-info-content p a {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.contact-info-content p a:hover {
+  color: var(--accent-color);
 }
 
 /************************************/
@@ -2948,8 +3107,7 @@ footer .social-media a:hover {
 /************************************/
 /***      26. Responsive css      ***/
 /************************************/
-
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
   .main-menu ul li {
     margin: 0;
   }
@@ -2974,6 +3132,56 @@ footer .social-media a:hover {
   .hero.hero-slider-layout .hero-slide {
     padding: 280px 0 140px;
     height: 150vh;
+  }
+
+  .page-header {
+    padding: 490px 0 100px;
+    /* margin-top: -92px; */
+  }
+
+  .page-header-box h1 {
+    font-size: 90px;
+    /* margin-bottom: 5px; */
+  }
+}
+
+
+
+@media only screen and (min-width: 834px) and (max-width: 1194px) and (orientation: portrait) {
+  .main-menu ul li {
+    margin: 0;
+  }
+
+  .main-menu ul li a {
+    font-size: 14px;
+  }
+
+  .hero-content .section-title h1 {
+    font-size: 70px;
+  }
+
+  /* .contact-infos {
+    display: none;
+  } */
+
+  .hero.hero-slider-layout .hero-slide .hero-slider-image img {
+    /* height: 150vh; */
+    height: 100%;
+  }
+
+  .hero.hero-slider-layout .hero-slide {
+    padding: 280px 0 140px;
+    height: 150vh;
+  }
+
+  .page-header {
+    padding: 530px 0 100px;
+    /* margin-top: -92px; */
+  }
+
+  .page-header-box h1 {
+    font-size: 90px;
+    /* margin-bottom: 5px; */
   }
 
 }
@@ -3237,6 +3445,46 @@ footer .social-media a:hover {
     margin: 0 auto;
   }
 
+  .our-testimonials-image{
+		height: auto;
+	}
+
+	.our-testimonials-image figure,
+	.our-testimonials-image figure img{
+		height: auto;
+		aspect-ratio: 1 / 0.65;
+	}
+
+	.our-testimonial-content{
+		padding: 50px 15px;
+	}
+
+	.our-testimonial-content .section-title{
+		background-size: contain;
+	}
+
+	.testimonial-slider{
+		max-width: 100%;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+	}
+
+	.testimonial-rating{
+		margin-bottom:15px;
+	}
+
+	.testimonial-content{
+		margin-bottom: 30px;
+	}
+
+	.testimonial-content p{
+		font-size: 18px;
+	}
+
+	.testimonial-rating-counter .rating-counter h2{
+		font-size: 48px;
+	}
+
   .our-blog {
     padding: 50px 0;
   }
@@ -3266,6 +3514,8 @@ footer .social-media a:hover {
     margin-top: 10px;
   }
 
+  
+
   footer .address {
     margin-top: 10px;
   }
@@ -3277,7 +3527,7 @@ footer .social-media a:hover {
 
   .page-header {
     padding: 180px 0 100px;
-    margin-top: -92px;
+    /* margin-top: -92px; */
   }
 
   .page-header-box h1 {
@@ -3875,8 +4125,13 @@ footer .social-media a:hover {
   }
 
   .page-header-box h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
+    font-size: 74px;
+    /* margin-bottom: 5px; */
+  }
+
+  .page-header {
+    padding: 390px 0 100px;
+    /* margin-top: -92px; */
   }
 
   .page-header-box ol li.breadcrumb-item {
@@ -3894,7 +4149,7 @@ footer .social-media a:hover {
   .vision-mission {
     background: linear-gradient(
       180deg,
-      var(--primary-color) 40%,
+      var(--accent-color) 40%,
       var(--white-color) 40%
     );
   }
@@ -4059,7 +4314,16 @@ footer .social-media a:hover {
   }
 
   .hero-content .section-title h1 {
-    font-size: 60px;
+    font-size: 40px;
+  }
+
+  .page-header {
+    padding: 300px 0 100px;
+    /* margin-top: -92px; */
+  }
+  .page-header-box h1 {
+    font-size: 50px;
+    /* margin-bottom: 5px; */
   }
 }
 
@@ -4070,6 +4334,37 @@ footer .social-media a:hover {
   }
   .hero-content .section-title h1 {
     font-size: 40px;
+  }
+
+  .page-header {
+    padding: 300px 0 100px;
+    /* margin-top: -92px; */
+  }
+
+  .page-header-box h1 {
+    font-size: 50px;
+    /* margin-bottom: 5px; */
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .page-header {
+    padding: 260px 0 100px;
+    /* margin-top: -92px; */
+  }
+
+  .page-header-box h1 {
+    font-size: 50px;
+    /* margin-bottom: 5px; */
+  }
+
+  footer .icon-container a {
+    font-size: 18px;
+  }
+
+  footer .icon-container {
+    width: 30px;
+    height: 30px;
   }
 }
 
