@@ -43,7 +43,10 @@
     <!-- Lightbox2 -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
+      integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -59,30 +62,18 @@
     <!-- Header Start -->
     <header class="main-header">
       <div class="header-sticky">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg">
+        <nav class="container">
+          <div class="navbar navbar-expand-lg">
             <!-- Logo Start -->
             <a class="navbar-brand" href="index.html">
-              <img src="images/AROOM LOGO 22.png" alt="Logo" />
+              <img src="images/brand_logo.png" alt="Logo" />
             </a>
             <!-- Logo End -->
 
             <!-- Main Menu Start -->
-            <div class="collapse navbar-collapse main-menu" id="navbarNav">
+            <div class="collapse navbar-collapse main-menu">
               <div class="nav-menu-wrapper">
-                <div class="contact-infos" id="content">
-                  <p class="me-5">
-                    <i class="fa-solid fa-location-dot me-1"></i> Location :
-                    <a href="https://maps.app.goo.gl/Rxj3DLHjuVryJkzq5">
-                      Pilathara, Kannur, Kerala</a
-                    >
-                  </p>
-                  <p>
-                    <i class="fa-solid fa-phone me-1"></i> Phone :
-                    <a href="tel:+918893000020">+91 8893 0000 20</a>
-                  </p>
-                </div>
-                <ul class="navbar-nav mr-auto nav-li" id="menu">
+                <ul class="navbar-nav mr-auto" id="menu">
                   <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                   </li>
@@ -94,32 +85,23 @@
                     <a class="nav-link" href="services.html">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#">Projects</a>
+                    <a class="nav-link active" href="projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blogs</a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact Us</a>
                   </li>
-                </ul>
+
               </div>
-              <!-- Header Btn Start -->
-              <!-- <div class="header-btn d-inline-flex">
-                  <a href="#" class="btn-default">get in touch</a>
-                </div> -->
-              <!-- Header Btn End -->
             </div>
             <!-- Main Menu End -->
-            <div
-              class="navbar-toggle pe-3"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            ></div>
-          </nav>
-        </div>
+            <div class="navbar-toggle"></div>
+          </div>
+        </nav>
+        <div class="responsive-menu"></div>
       </div>
     </header>
     <!-- Header End -->
@@ -166,11 +148,14 @@
           <div class="col-lg-12">
             <!-- Project Item Boxes start -->
             <div class="row project-item-boxes align-items-center">
-              <div class="col-md-6 project-item-box architecture bedroom">
+              <div
+                class="col-md-6 project-item-box architecture bedroom"
+                id="lightgallery"
+              >
                 <a
                   href="images/project-1.jpg"
                   data-lightbox="image-gallery"
-                  data-title="Residential Spaces"
+                  data-title="Luxury Homes"
                 >
                   <!-- Project Item Start -->
                   <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
@@ -368,144 +353,7 @@
     <!-- Our Project End -->
 
     <!-- Footer section start -->
-    <footer>
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col col-lg-4">
-            <a href="#"
-              ><img
-                class="footer-logo"
-                src="./images/aroom_logo[1].png"
-                alt="logo"
-            /></a>
-            <p class="text-white mt-3 pe-5">
-              Explore stunning interior design solutions for every space.
-            </p>
-          </div>
-          <div class="col-12 col-lg-3 quick-links">
-            <h4 class="text-white mb-3 fw-bold">Quick Links</h4>
-            <ul class="list-unstyled">
-              <li class="mb-1">
-                <a href="index.html" class="text-decoration-none fs-6 fw-bold">Home</a>
-              </li>
-              <li class="mb-1">
-                <a href="about.html" class="text-decoration-nonee fs-6 fw-bold"
-                  >About</a
-                >
-              </li>
-              <li class="mb-1">
-                <a href="services.html" class="text-decoration-none fs-6 fw-bold"
-                  >Services</a
-                >
-              </li>
-              <li class="mb-1">
-                <a href="#" class="text-decoration-none fs-6 active fw-bold"
-                  >Projects</a
-                >
-              </li>
-              <li class="mb-1">
-                <a href="contact.html" class="text-decoration-none fs-6 fw-bold"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-12 col-lg-3 address">
-            <h4 class="text-white mb-3 fw-bold">Address</h4>
-            <ul class="list-unstyled">
-              <li class="text-white fs-6">
-                <i class="fa-solid fa-location-dot me-2"></i>
-                <a
-                  href="https://maps.app.goo.gl/Rxj3DLHjuVryJkzq5
-                  "
-                  class="text-decoration-none fw-bold"
-                  >Pilathara, Kannur, Kerala</a
-                >
-              </li>
-              <li class="text-white ms-4 mb-2">Pin 670501</li>
-              <li class="text-white fs-6">
-                <i class="fa-solid fa-phone-volume me-2"></i
-                ><a
-                  href="tel:+918893000020"
-                  class="text-decoration-none ms-1 fw-bold"
-                  >+91 8893 0000 20</a
-                >
-              </li>
-
-              <li class="text-white fs-6">
-                <i class="fa-solid fa-phone-volume me-2"></i
-                ><a
-                  href="tel:+917797000020"
-                  class="text-decoration-none ms-1 fw-bold"
-                  >+91 7797 0000 20</a
-                >
-              </li>
-
-              <li class="text-white fs-6">
-                <i class="fa-solid fa-phone-volume me-2"></i
-                ><a
-                  href="tel:+919633005700"
-                  class="text-decoration-none ms-1 fw-bold"
-                  >+91 9633 0057 00</a
-                >
-              </li>
-              <li class="text-white fs-6 mt-2">
-                <i class="fa-regular fa-envelope me-2"></i
-                ><a
-                  href="mailto:aroominteriors@gmail.com"
-                  class="text-decoration-none fw-bold fs-6"
-                  >aroominteriors@gmail.com</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-xl-2 social-media">
-            <h4 class="text-white mb-4 fw-bold">Social Media</h4>
-            <div class="d-flex">
-              <div class="icon-container me-3">
-                <a
-                  href="https://www.instagram.com/aroom_interiors?igsh=MTgydzViMWZxZm5oYg=="
-                  class="text-decoration-nonee"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-              </div>
-              <div class="icon-container me-3">
-                <a
-                  href="https://www.facebook.com/aroominteriors?mibextid=ZbWKwL"
-                  class="text-decoration-none"
-                  ><i class="fa-brands fa-facebook"></i
-                ></a>
-              </div>
-              <div class="icon-container me-3">
-                <a
-                  href="https://youtube.com/@aroominteriors3456?si=_NQUYHgVEY1SSkkM"
-                  class="text-decoration-none"
-                  ><i class="fa-brands fa-youtube"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <!-- Footer Copyright Section Start -->
-        <div class="footer-copyright">
-          <div class="row">
-            <div class="col-md-12">
-              <!-- Footer Copyright Start -->
-              <div class="footer-copyright-text">
-                <p>
-                  Copyright ©2009 aroominteriors, All Rights Reserved. | Design
-                  By Dhanwis Techinfo Solutions.
-                </p>
-              </div>
-
-              <!-- Footer Copyright End -->
-            </div>
-          </div>
-        </div>
-        <!-- Footer Copyright Section End -->
-      </div>
-    </footer>
+    
 
     <!-- Pagination script -->
     <script>
@@ -577,6 +425,17 @@
       element(totalPages, 1);
     </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      lightbox.option({
+          'wrapAround': true,
+          'disableScrolling': false,
+          'showImageNumberLabel': false,
+          'fitImagesInViewport': true,
+          // 'positionFromTop': 300
+      });
+  });
+</script>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -613,8 +472,14 @@
     <script src="js/function.js"></script>
 
     <!-- Lightbox2 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  </body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"
+      integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+
 
   <!-- Mirrored from demo.awaikenthemes.com/html-preview/inspaire/projects.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jan 2025 09:17:20 GMT -->
 </html>
