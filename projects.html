@@ -58,7 +58,6 @@
       />
     </a>
 
-
     <!-- Preloader Start -->
     <!-- <div class="preloader">
 		<div class="loading-container">
@@ -103,7 +102,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact Us</a>
                   </li>
-
+                </ul>
               </div>
             </div>
             <!-- Main Menu End -->
@@ -337,27 +336,27 @@
                 </a>
                 <!-- Project Item End -->
               </div>
-
-             
             </div>
             <!-- Project Item Boxes End -->
           </div>
           <div class="col-lg-12">
             <!-- Page Pagination Start -->
             <div class="page-pagination wow fadeInUp" data-wow-delay="1.2s">
-                <ul class="pagination">
-                    <li><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
-                </ul>
+              <ul class="pagination">
+                <li>
+                  <a href="#"><i class="fa-solid fa-angle-left"></i></a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li>
+                  <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+                </li>
+              </ul>
             </div>
             <!-- Page Pagination End -->
+          </div>
         </div>
-        </div>
-
-       
       </div>
     </div>
     <!-- Our Project End -->
@@ -381,40 +380,26 @@
             <h4 class="text-white mb-3 fw-bold">Quick Links</h4>
             <ul class="list-unstyled">
               <li class="mb-1">
-                <a href="index.html" class="text-decoration-none"
-                  >Home</a
-                >
+                <a href="index.html" class="text-decoration-none">Home</a>
               </li>
               <li class="mb-1">
-                <a href="about.html" class="text-decoration-nonee"
-                  >About</a
-                >
+                <a href="about.html" class="text-decoration-nonee">About</a>
               </li>
               <li class="mb-1">
-                <a
-                  href="services.html"
-                  class="text-decoration-none"
+                <a href="services.html" class="text-decoration-none"
                   >Services</a
                 >
               </li>
               <li class="mb-1">
-                <a
-                  href="projects.html"
-                  class="text-decoration-none active"
+                <a href="projects.html" class="text-decoration-none active"
                   >Projects</a
                 >
               </li>
               <li class="mb-1">
-                <a
-                  href="blog.html"
-                  class="text-decoration-noned"
-                  >Blogs</a
-                >
+                <a href="blog.html" class="text-decoration-noned">Blogs</a>
               </li>
               <li class="mb-1">
-                <a href="contact.html" class="text-decoration-none"
-                  >Contact</a
-                >
+                <a href="contact.html" class="text-decoration-none">Contact</a>
               </li>
             </ul>
           </div>
@@ -431,7 +416,6 @@
                 >
               </li>
               <li class="text-white ms-4 mb-2">Pin 670501</li>
-              
 
               <li class="text-white fs-6">
                 <i class="fa-solid fa-phone-volume me-2"></i
@@ -495,7 +479,7 @@
               <!-- Footer Copyright Start -->
               <div class="footer-copyright-text">
                 <p>
-                  Copyright ©2009 aroominteriors, All Rights Reserved. | Design
+                  Copyright ©<span id="year"></span> aroominteriors, All Rights Reserved. | Design
                   By Dhanwis Techinfo Solutions.
                 </p>
               </div>
@@ -508,19 +492,21 @@
       </div>
     </footer>
 
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      lightbox.option({
-          'wrapAround': true,
-          'disableScrolling': false,
-          'showImageNumberLabel': false,
-          'fitImagesInViewport': true,
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        lightbox.option({
+          wrapAround: true,
+          disableScrolling: false,
+          showImageNumberLabel: false,
+          fitImagesInViewport: true,
           // 'positionFromTop': 300
+        });
       });
-  });
-</script>
+    </script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -563,8 +549,5 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-
-
-  <!-- Mirrored from demo.awaikenthemes.com/html-preview/inspaire/projects.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jan 2025 09:17:20 GMT -->
+  </body>
 </html>

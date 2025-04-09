@@ -49,8 +49,6 @@
       />
     </a>
 
-
-
     <!-- Preloader Start -->
     <!-- <div class="preloader">
 		<div class="loading-container">
@@ -95,7 +93,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact Us</a>
                   </li>
-
+                </ul>
               </div>
             </div>
             <!-- Main Menu End -->
@@ -318,38 +316,24 @@
             <h4 class="text-white mb-3 fw-bold">Quick Links</h4>
             <ul class="list-unstyled">
               <li class="mb-1">
-                <a href="index.html" class="text-decoration-none"
-                  >Home</a
-                >
+                <a href="index.html" class="text-decoration-none">Home</a>
               </li>
               <li class="mb-1">
-                <a href="about.html" class="text-decoration-nonee"
-                  >About</a
-                >
+                <a href="about.html" class="text-decoration-nonee">About</a>
               </li>
               <li class="mb-1">
-                <a href="#" class="text-decoration-none active"
-                  >Services</a
-                >
+                <a href="#" class="text-decoration-none active">Services</a>
               </li>
               <li class="mb-1">
-                <a
-                  href="projects.html"
-                  class="text-decoration-none"
+                <a href="projects.html" class="text-decoration-none"
                   >Projects</a
                 >
               </li>
               <li class="mb-1">
-                <a
-                  href="blog.html"
-                  class="text-decoration-none"
-                  >Blogs</a
-                >
+                <a href="blog.html" class="text-decoration-none">Blogs</a>
               </li>
               <li class="mb-1">
-                <a href="contact.html" class="text-decoration-none"
-                  >Contact</a
-                >
+                <a href="contact.html" class="text-decoration-none">Contact</a>
               </li>
             </ul>
           </div>
@@ -366,7 +350,6 @@
                 >
               </li>
               <li class="text-white ms-4 mb-2">Pin 670501</li>
-              
 
               <li class="text-white fs-6">
                 <i class="fa-solid fa-phone-volume me-2"></i
@@ -430,7 +413,7 @@
               <!-- Footer Copyright Start -->
               <div class="footer-copyright-text">
                 <p>
-                  Copyright ©2009 aroominteriors, All Rights Reserved. | Design
+                  Copyright ©<span id="year"></span> aroominteriors, All Rights Reserved. | Design
                   By Dhanwis Techinfo Solutions.
                 </p>
               </div>
@@ -442,6 +425,10 @@
         <!-- Footer Copyright Section End -->
       </div>
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -478,5 +465,4 @@
     <script src="js/function.js"></script>
   </body>
 
-  <!-- Mirrored from demo.awaikenthemes.com/html-preview/inspaire/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jan 2025 09:17:19 GMT -->
 </html>

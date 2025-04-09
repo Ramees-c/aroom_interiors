@@ -17,7 +17,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="images/icons/arrom_favicon.png"
+      href="images/icons/aroom_favicon.png"
     />
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
@@ -1210,8 +1210,8 @@
               <!-- Footer Copyright Start -->
               <div class="footer-copyright-text">
                 <p>
-                  Copyright ©2009 aroominteriors, All Rights Reserved. | Design
-                  By Dhanwis Techinfo Solutions.
+                  Copyright ©<span id="year"></span> aroominteriors, All Rights
+                  Reserved. | Design By Dhanwis Techinfo Solutions.
                 </p>
               </div>
 
@@ -1314,6 +1314,10 @@
           item.classList.remove("playing");
         });
       });
+    </script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
     <!-- Jquery Library File -->
