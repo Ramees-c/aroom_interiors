@@ -1585,6 +1585,8 @@ header.main-header .header-sticky.active .navbar{
 .how-we-work {
   background: var(--accent-color);
   padding: 100px 0;
+  /* padding-top: 100px;
+  padding-bottom: 50px; */
 }
 
 .how-we-work-list {
@@ -1916,6 +1918,7 @@ footer .footer-logo {
 footer .quick-links ul li a {
   color: white;
   font-size: 18px;
+  font-weight: 500;
 }
 
 footer .quick-links ul li a:hover {
@@ -1924,7 +1927,7 @@ footer .quick-links ul li a:hover {
 
 footer .quick-links ul li .active {
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: 500;
 }
 
 footer .address a {
@@ -2072,7 +2075,7 @@ footer .social-media .icon-container:hover {
 }
 
 .about-facility-item .icon-box img {
-  max-width: 24px;
+  max-width: 34px;
   z-index: 1;
   transition: all 0.4s ease-in-out;
 }
@@ -3943,6 +3946,10 @@ footer .social-media .icon-container:hover {
   .footer-copyright {
     margin-top: 0px;
     padding: 20px 0;
+  }
+
+  .footer-copyright .footer-copyright-text p {
+    font-size: 10px;
   }
 
   .page-header {
