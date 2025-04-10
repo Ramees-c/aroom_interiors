@@ -56,6 +56,7 @@
 		},
 	});
 
+	
 	/* How We Work Client Logo Slider JS */ 
 	if ($('.how-work-company-slider').length) {
 		const how_work_company_slider = new Swiper('.how-work-company-slider .swiper', {
@@ -103,7 +104,7 @@
 		const testimonial_slider = new Swiper('.our-client-slider .swiper', {
 			slidesPerView : 2,
 			speed: 1000,
-			spaceBetween: 60,
+			spaceBetween: 40,
 			loop: true,
 			autoplay: {
 				delay: 5000,
@@ -119,6 +120,8 @@
 		});
 	}
 
+
+	
 	/* Skill Bar */
 	if ($('.skills-progress-bar').length) {
 		$('.skills-progress-bar').waypoint(function() {
