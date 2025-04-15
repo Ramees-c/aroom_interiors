@@ -829,7 +829,7 @@ header.main-header .header-sticky.active .navbar{
 /************************************/
 
 .about-us {
-  background-image: url("../images/arrom_pattern.png");
+  background-image: url("../images/bg-pattern.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1081,7 +1081,11 @@ header.main-header .header-sticky.active .navbar{
 
  /* Video section */
   .video-section {
-    padding: 100px 0;
+  padding: 100px 0;
+  background-image: url("../images/bg-pattern.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   }
 
 
@@ -1237,15 +1241,13 @@ header.main-header .header-sticky.active .navbar{
 
 
 
-
-
-
 /************************************/
 /***     07. Our Services css     ***/
 /************************************/
 
 .our-services {
   padding: 100px 0;
+  background-color: var(--secondery-color);
 }
 
 .flip-card {
@@ -1361,6 +1363,11 @@ header.main-header .header-sticky.active .navbar{
 
 .our-project {
   padding: 100px 0 70px;
+  background-image: url("../images/bg-pattern.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
 }
 
 .our-Project-nav {
@@ -2431,6 +2438,7 @@ footer .social-media .icon-container:hover {
 
 
 
+
 .our-clients .our-clients-box {
   max-width: 1100px;
   margin: 0 auto;
@@ -2444,20 +2452,22 @@ footer .social-media .icon-container:hover {
 } */
 
 
+
 .our-client-slider .client-logo {
-  text-align: center;
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .our-client-slider .client-logo img {
-  /* width: 120px;
-  max-height: 120px; */
-
   max-height: 60px;
   width: auto;
   max-width: 150px;
   object-fit: contain;
-}
+  display: block; /* Removes extra space below image */
+} 
 
 /* .swiper-slide {
   width: auto !important;
@@ -3947,7 +3957,7 @@ footer .social-media .icon-container:hover {
   }
 
   footer .footer-logo {
-    width: 110px;
+    width: 120px;
     height: 90px;
   }
 
