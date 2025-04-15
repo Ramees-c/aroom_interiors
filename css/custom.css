@@ -829,7 +829,7 @@ header.main-header .header-sticky.active .navbar{
 /************************************/
 
 .about-us {
-  background-image: url("../images/bg-pattern.png");
+  background-image: url("../images/pattern_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1082,7 +1082,7 @@ header.main-header .header-sticky.active .navbar{
  /* Video section */
   .video-section {
   padding: 100px 0;
-  background-image: url("../images/bg-pattern.png");
+  background-image: url("../images/pattern_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1363,7 +1363,7 @@ header.main-header .header-sticky.active .navbar{
 
 .our-project {
   padding: 100px 0 70px;
-  background-image: url("../images/bg-pattern.png");
+  background-image: url("../images/pattern_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1918,8 +1918,7 @@ footer {
 
 footer .footer-logo {
   /* width: 180px; */
-  width: 190px;
-  height: 130px;
+  width: 160px;
 }
 
 footer .quick-links ul li a {
@@ -3621,7 +3620,7 @@ footer .social-media .icon-container:hover {
     }
 
   .navbar-brand img {
-    width: 90px;
+    width: 100px;
     height: 50px;
     padding-left: 10px;
   }
