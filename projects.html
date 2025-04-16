@@ -55,6 +55,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
     <!-- WhatsApp Icon -->
     <a href="https://wa.me/+917797000020" class="whatsapp-icon" target="_blank">
@@ -282,7 +283,7 @@
                 </a>
                 <!-- Project Item End -->
               </div>
-              <div class="col-md-4 project-item-box furniture">
+               <div class="col-md-4 project-item-box furniture">
                 <!-- Project Item Start -->
                 <a href="images/projects/722.jpg" data-lightbox="image-gallery">
                   <div class="project-item wow fadeInUp" data-wow-delay="1.2s">
@@ -313,6 +314,8 @@
                 </a>
                 <!-- Project Item End -->
               </div>
+
+              
             </div>
             <!-- Project Item Boxes End -->
           </div>
@@ -456,7 +459,7 @@
                 <p>
                   Copyright ©<span id="year"></span> aroominteriors, All Rights
                   Reserved. |
-                  <a href="http://www.dhanwis.com/"
+                  <a href="http://www.dhanwis.com/" target="_blank"
                     >Design By Dhanwis Techinfo Solutions.</a
                   >
                 </p>
@@ -482,16 +485,6 @@
       });
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const projectItems = document.querySelectorAll(".project-item-box");
-        const pagination = document.querySelector(".page-pagination");
-
-        if (projectItems.length < 9 && pagination) {
-          pagination.style.display = "none";
-        }
-      });
-    </script>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
