@@ -453,12 +453,12 @@
       <div
         id="videoCarousel"
         class="carousel slide fullscreen-video-carousel wow fadeInUp"
-        data-bs-ride="carousel"
+        data-bs-ride="false"
       >
         <div class="carousel-inner">
           <!-- Video Slide 1 -->
           <div class="carousel-item active">
-            <video loop playsinline muted>
+            <video loop muted>
               <source
                 src="videos/video1.mp4"
                 type="video/mp4"
@@ -477,7 +477,7 @@
 
           <!-- Video Slide 2 -->
           <div class="carousel-item">
-            <video loop playsinline muted>
+            <video loop muted>
               <source
                 src="videos/video2.mp4"
                 type="video/mp4"
@@ -496,7 +496,7 @@
 
           <!-- Video Slide 3 -->
           <div class="carousel-item">
-            <video loop playsinline muted>
+            <video loop muted>
               <source
                 src="videos/video3.mp4"
                 type="video/mp4"
@@ -1192,6 +1192,8 @@
           carouselItem.classList.remove("playing");
         }
       }
+
+      
     
       // Seek function
       function seekToTime(event, progressContainer) {

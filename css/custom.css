@@ -3550,6 +3550,8 @@ footer .social-media .icon-container:hover {
     width: 40px;
   }
 
+
+
   .video-section .fullscreen-video-carousel {
     height: 40vh;
    
@@ -3806,6 +3808,10 @@ footer .social-media .icon-container:hover {
 
   .why-choose-images {
     margin-left: 0;
+  }
+
+  .video-section {
+    padding: 20px 0;
   }
 
   .video-section .fullscreen-video-carousel {
