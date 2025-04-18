@@ -3560,8 +3560,8 @@ footer .social-media .icon-container:hover {
   }
 
   .video-section .video-control-btn {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .video-section .video-control-btn i {
@@ -3569,8 +3569,8 @@ footer .social-media .icon-container:hover {
   }
 
   .video-section .custom-carousel-control {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .video-section .custom-carousel-control i {
@@ -3818,8 +3818,8 @@ footer .social-media .icon-container:hover {
   }
 
   .video-section .video-control-btn {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .video-section .video-control-btn i {
@@ -3827,13 +3827,22 @@ footer .social-media .icon-container:hover {
   }
 
   .video-section .custom-carousel-control {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .video-section .custom-carousel-control i {
     font-size: 1rem;
   }
+
+  .video-section .video-controls {
+    bottom: 40px;
+  }
+
+  .video-section .carousel-indicators {
+    bottom: 20px;
+  }
+
 
   .flip-card {
     margin-bottom: 40px;
@@ -4795,8 +4804,8 @@ footer .social-media .icon-container:hover {
   }
 
   .video-section .video-control-btn {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .video-section .video-control-btn i {
@@ -4804,8 +4813,8 @@ footer .social-media .icon-container:hover {
   }
 
   .video-section .custom-carousel-control {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .video-section .custom-carousel-control i {
@@ -4841,8 +4850,8 @@ footer .social-media .icon-container:hover {
   }
 
   .video-section .video-control-btn {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .video-section .video-control-btn i {
@@ -4850,8 +4859,8 @@ footer .social-media .icon-container:hover {
   }
 
   .video-section .custom-carousel-control {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .video-section .custom-carousel-control i {

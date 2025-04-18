@@ -1161,49 +1161,56 @@
     </footer>
 
     <script>
-      // Initialize carousel
+      // Initialize carousel with no auto-sliding
       const videoCarousel = new bootstrap.Carousel(
         document.getElementById("videoCarousel"),
         {
-          interval: false, // Disable auto-cycling
+          interval: false, // Disable auto-cycling completely
+          wrap: false,     // Prevent circular navigation
+          touch: true      // Enable touch support
         }
       );
-
-      // Toggle play/pause
-      function toggleVideo(button) {
+    
+      // Toggle play/pause function
+      function toggleVideo(button, event) {
+        if (event) event.preventDefault();
+        
         const carouselItem = button.closest(".carousel-item");
         const video = carouselItem.querySelector("video");
-
+    
         if (video.paused) {
-          video.play();
-          carouselItem.classList.add("playing");
-          // Start progress update when playing
-          updateVideoProgress(video);
+          video.play()
+            .then(() => {
+              carouselItem.classList.add("playing");
+              updateVideoProgress(video);
+            })
+            .catch(error => {
+              console.log("Playback prevented:", error);
+            });
         } else {
           video.pause();
           carouselItem.classList.remove("playing");
         }
       }
-
-      // Seek to specific time
+    
+      // Seek function
       function seekToTime(event, progressContainer) {
-        const video = progressContainer
-          .closest(".carousel-item")
-          .querySelector("video");
+        event.preventDefault();
+        
+        const video = progressContainer.closest(".carousel-item").querySelector("video");
         const progressBar = progressContainer.querySelector(".progress-bar");
         const rect = progressContainer.getBoundingClientRect();
-        const pos = (event.clientX - rect.left) / rect.width;
-
+        const clientX = event.clientX || (event.touches && event.touches[0].clientX);
+        const pos = (clientX - rect.left) / rect.width;
+    
         video.currentTime = pos * video.duration;
         progressBar.style.width = pos * 100 + "%";
       }
-
-      // Update individual video progress
+    
+      // Update progress bar
       function updateVideoProgress(video) {
-        const progressBar = video
-          .closest(".carousel-item")
-          .querySelector(".progress-bar");
-
+        const progressBar = video.closest(".carousel-item").querySelector(".progress-bar");
+    
         function update() {
           if (!video.paused && !video.ended) {
             const percentage = (video.currentTime / video.duration) * 100;
@@ -1211,46 +1218,64 @@
             requestAnimationFrame(update);
           }
         }
-
+    
         update();
       }
-
+    
       // Initialize all videos
-      document.querySelectorAll(".carousel-item video").forEach((video) => {
-        // Set up timeupdate listener
-        video.addEventListener("timeupdate", function () {
-          const progressBar =
-            this.closest(".carousel-item").querySelector(".progress-bar");
+      document.querySelectorAll(".carousel-item").forEach((item) => {
+        const video = item.querySelector("video");
+        const btn = item.querySelector(".video-control-btn");
+        const progressContainer = item.querySelector(".progress-container");
+    
+        // iOS requires these attributes
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
+    
+        // Event listeners
+        btn.addEventListener('click', (e) => toggleVideo(btn, e));
+        btn.addEventListener('touchstart', (e) => toggleVideo(btn, e), { passive: false });
+        
+        progressContainer.addEventListener('click', (e) => seekToTime(e, progressContainer));
+        progressContainer.addEventListener('touchstart', (e) => seekToTime(e, progressContainer), { passive: false });
+    
+        // Standard event listeners
+        video.addEventListener("timeupdate", function() {
           const percentage = (this.currentTime / this.duration) * 100;
-          progressBar.style.width = percentage + "%";
+          item.querySelector(".progress-bar").style.width = percentage + "%";
         });
-
-        // Reset when video ends
-        video.addEventListener("ended", function () {
-          this.closest(".carousel-item").classList.remove("playing");
-          const progressBar =
-            this.closest(".carousel-item").querySelector(".progress-bar");
-          progressBar.style.width = "0%";
+    
+        video.addEventListener("ended", function() {
+          item.classList.remove("playing");
+          item.querySelector(".progress-bar").style.width = "0%";
+          video.currentTime = 0; // Reset video
         });
-
-        // Reset when paused
-        video.addEventListener("pause", function () {
+    
+        video.addEventListener("pause", function() {
           if (this.ended) {
-            const progressBar =
-              this.closest(".carousel-item").querySelector(".progress-bar");
-            progressBar.style.width = "0%";
+            item.querySelector(".progress-bar").style.width = "0%";
           }
         });
       });
-
-      // Pause videos when sliding
-      videoCarousel._element.addEventListener("slide.bs.carousel", function () {
-        document.querySelectorAll(".carousel-item.playing").forEach((item) => {
+    
+      // Pause current video when sliding manually
+      videoCarousel._element.addEventListener('slide.bs.carousel', function() {
+        document.querySelectorAll(".carousel-item.playing").forEach(item => {
           const video = item.querySelector("video");
           video.pause();
           item.classList.remove("playing");
         });
       });
+    
+      // Start first video automatically (if allowed)
+      document.querySelector('.carousel-item.active video').play()
+        .then(() => {
+          document.querySelector('.carousel-item.active').classList.add("playing");
+          updateVideoProgress(document.querySelector('.carousel-item.active video'));
+        })
+        .catch(error => {
+          console.log("Autoplay prevented");
+        });
     </script>
 
 
