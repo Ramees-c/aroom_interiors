@@ -110,6 +110,59 @@ body {
   background-color: transparent;
 }
 
+.image-anime2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-anime2::before {
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,.2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+
+.image-anime2:hover::before {
+  -webkit-animation: circle 1s;
+	animation: circle 1s;
+}
+
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
 .reveal {
   position: relative;
   display: -webkit-inline-box;
@@ -1087,8 +1140,12 @@ header.main-header .header-sticky.active .navbar {
 .video-section .video-control-btn i {
   font-size: 2rem;
   color: var(--accent-color);
-  margin-left: 5px;
+  /* margin-left: 5px; */
   font-weight: bold;
+}
+
+.video-section .video-control-btn .fa-play {
+  margin-left: 5px;
 }
 
 /* Hide play button when video is playing */
@@ -1128,6 +1185,7 @@ header.main-header .header-sticky.active .navbar {
 .video-section .custom-carousel-control i {
   font-size: 1.5rem;
   color: var(--accent-color);
+  font-weight: bold;
 }
 
 /* Rounded indicators */
@@ -1390,6 +1448,15 @@ header.main-header .header-sticky.active .navbar {
     rgba(0, 0, 0, 0) 111.33%
   ); */
   z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-featured-image:hover figure::before {
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.467) 0%,
+    rgba(0, 0, 0, 0.221) 111.33%
+  );
 }
 
 .project-featured-image figure img {
@@ -1462,6 +1529,7 @@ header.main-header .header-sticky.active .navbar {
   text-transform: capitalize;
   position: relative;
   z-index: 1;
+  font-weight: 700;
 }
 
 .project-content h3 {
@@ -1478,6 +1546,8 @@ header.main-header .header-sticky.active .navbar {
 .project-content h2 a {
   color: inherit;
 }
+
+
 
 
 
@@ -1723,10 +1793,10 @@ header.main-header .header-sticky.active .navbar {
 
 .our-blog {
   padding: 100px 0;
-  background: url("../images/section-bg-shape-2.svg");
+  background: url("../images/pattern_bg.png");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .post-item {
@@ -3060,6 +3130,10 @@ footer .social-media .icon-container:hover {
 
   .video-section .custom-carousel-control i {
     font-size: 1rem;
+  }
+
+  .video-section .video-control-btn .fa-play {
+    margin-left: 3px;
   }
 
   .video-section .video-controls {
