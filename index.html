@@ -50,12 +50,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <!-- Lightbox2 -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
       integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+
+      
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css"
     />
   </head>
   <body>
@@ -424,7 +434,7 @@
                 <!-- Why Choose img 3 Start -->
                 <div class="why-choose-img-3">
                   <figure class="image-anime reveal">
-                    <img src="images/484.jpg" alt="" />
+                    <img src="images/55.jpg" alt="" />
                   </figure>
                 </div>
                 <!-- Why Choose img 3 End -->
@@ -463,110 +473,119 @@
           </div>
         </div>
         <div
-        id="videoCarousel"
-        class="carousel slide fullscreen-video-carousel wow fadeInUp"
-        data-bs-ride="false"
-      >
-        <div class="carousel-inner">
-          <!-- Video Slide 1 -->
-          <div class="carousel-item active">
-            <video loop muted>
-              <source src="videos/video1.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-btn" onclick="toggleVideo(this)">
-              <i class="fas fa-play"></i>
-              <i class="fas fa-pause"></i>
+          id="videoCarousel"
+          class="carousel slide fullscreen-video-carousel wow fadeInUp"
+          data-bs-ride="false"
+        >
+          <div class="carousel-inner">
+            <!-- Video Slide 1 -->
+            <div class="carousel-item active">
+              <video loop muted>
+                <source src="videos/video1.mp4" type="video/mp4" />
+              </video>
+              <div class="video-control-btn" onclick="toggleVideo(this)">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+              </div>
+              <div class="video-controls">
+                <div
+                  class="progress-container"
+                  onclick="seekToTime(event, this)"
+                >
+                  <div class="progress-bar"></div>
+                </div>
+              </div>
             </div>
-            <div class="video-controls">
-              <div class="progress-container" onclick="seekToTime(event, this)">
-                <div class="progress-bar"></div>
+
+            <!-- Video Slide 2 -->
+            <div class="carousel-item">
+              <video loop muted>
+                <source src="videos/video2.mp4" type="video/mp4" />
+              </video>
+              <div class="video-control-btn" onclick="toggleVideo(this)">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+              </div>
+              <div class="video-controls">
+                <div
+                  class="progress-container"
+                  onclick="seekToTime(event, this)"
+                >
+                  <div class="progress-bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Slide 3 -->
+            <div class="carousel-item">
+              <video loop muted>
+                <source src="videos/video3.mp4" type="video/mp4" />
+              </video>
+              <div class="video-control-btn" onclick="toggleVideo(this)">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+              </div>
+              <div class="video-controls">
+                <div
+                  class="progress-container"
+                  onclick="seekToTime(event, this)"
+                >
+                  <div class="progress-bar"></div>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Video Slide 2 -->
-          <div class="carousel-item">
-            <video loop muted>
-              <source src="videos/video2.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-btn" onclick="toggleVideo(this)">
-              <i class="fas fa-play"></i>
-              <i class="fas fa-pause"></i>
-            </div>
-            <div class="video-controls">
-              <div class="progress-container" onclick="seekToTime(event, this)">
-                <div class="progress-bar"></div>
-              </div>
-            </div>
-          </div>
+          <!-- Custom Previous Button -->
+          <button
+            class="carousel-control-prev position-absolute start-0 ms-4"
+            type="button"
+            data-bs-target="#videoCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="custom-carousel-control" aria-hidden="true">
+              <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="visually-hidden">Previous</span>
+          </button>
 
-          <!-- Video Slide 3 -->
-          <div class="carousel-item">
-            <video loop muted>
-              <source src="videos/video3.mp4" type="video/mp4" />
-            </video>
-            <div class="video-control-btn" onclick="toggleVideo(this)">
-              <i class="fas fa-play"></i>
-              <i class="fas fa-pause"></i>
-            </div>
-            <div class="video-controls">
-              <div class="progress-container" onclick="seekToTime(event, this)">
-                <div class="progress-bar"></div>
-              </div>
-            </div>
+          <!-- Custom Next Button -->
+          <button
+            class="carousel-control-next position-absolute end-0 me-4"
+            type="button"
+            data-bs-target="#videoCarousel"
+            data-bs-slide="next"
+          >
+            <span class="custom-carousel-control" aria-hidden="true">
+              <i class="fas fa-chevron-right"></i>
+            </span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+          <!-- Rounded Indicators -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#videoCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#videoCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#videoCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
         </div>
-
-        <!-- Custom Previous Button -->
-        <button
-          class="carousel-control-prev position-absolute start-0 ms-4"
-          type="button"
-          data-bs-target="#videoCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="custom-carousel-control" aria-hidden="true">
-            <i class="fas fa-chevron-left"></i>
-          </span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-
-        <!-- Custom Next Button -->
-        <button
-          class="carousel-control-next position-absolute end-0 me-4"
-          type="button"
-          data-bs-target="#videoCarousel"
-          data-bs-slide="next"
-        >
-          <span class="custom-carousel-control" aria-hidden="true">
-            <i class="fas fa-chevron-right"></i>
-          </span>
-          <span class="visually-hidden">Next</span>
-        </button>
-
-        <!-- Rounded Indicators -->
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#videoCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#videoCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#videoCarousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-      </div>
       </div>
     </div>
 
@@ -692,7 +711,7 @@
             <div class="section-title">
               <h3 class="wow fadeInUp">latest project</h3>
               <h2 class="text-anime-style-2" data-cursor="-opaque">
-                Premium projects that defines<span> Aroom's quality</span>
+                Premium projects that defines<span> Aroom's quality</span>
               </h2>
             </div>
             <!-- Section Title End -->
@@ -703,116 +722,169 @@
           <div class="col-lg-12">
             <!-- Project Item Boxes start -->
             <div class="row project-item-boxes align-items-center">
-              <div class="col-md-4 project-item-box architecture bedroom">
-                <a
-                  href="images/projects/01_View12 copy.jpg"
-                  data-lightbox="image-gallery"
+              <!-- PhotoSwipe Gallery Items -->
+              <div
+                class="col-md-6 col-lg-4 project-item-box architecture bedroom"
+              >
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.2s"
+                  data-pswp-src="images/projects/01_View12 copy.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Contemporary Dining Elegance"
+                  onclick="openPhotoSwipe(this)"
                 >
-                  <!-- Project Item Start -->
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime3">
-                          <img
-                            src="images/projects/01_View12 copy.jpg"
-                            alt=""
-                          />
-                        </figure>
-                      </div>
-                    </div>
-                    <div class="project-content">
-                      <h3>residential spaces</h3>
-                      <h2><a href="project-single.html">urban retreat: modern design meets comfort</a></h2>
-                  </div>
-                  </div>
-                  <!-- Project Item End -->
-                </a>
-              </div>
-
-              <div class="col-md-4 project-item-box interior kitchen">
-                <!-- Project Item Start -->
-                <a href="images/projects/4.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime3">
-                          <img src="images/projects/4.jpg" alt="" />
-                        </figure>
-                      </div>
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/01_View12 copy.jpg"
+                          alt="Contemporary Dining Elegance"
+                        />
+                      </figure>
                     </div>
                   </div>
-                </a>
-                <!-- Project Item End -->
-              </div>
-
-              <div class="col-md-4 project-item-box kitchen bedroom">
-                <!-- Project Item Start -->
-                <a href="images/projects/216.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime3">
-                          <img src="images/projects/216.jpg" alt="" />
-                        </figure>
-                      </div>
-                    </div>
+                  <div class="project-content">
+                    <h3>Contemporary Dining Elegance</h3>
+                    <h2>Stylish, serene, marble-top dining area.</h2>
                   </div>
-                </a>
-                <!-- Project Item End -->
+                </div>
               </div>
 
-              <div class="col-md-4 project-item-box kitchen bedroom">
-                <!-- Project Item Start -->
-                <a href="images/projects/366.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime3">
-                          <img src="images/projects/366.jpg" alt="" />
-                        </figure>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <!-- Project Item End -->
-              </div>
-
-              <div class="col-md-4 project-item-box kitchen bedroom">
-                <!-- Project Item Start -->
-                <a
-                  href="images/projects/01_View04 copy.jpg"
-                  data-lightbox="image-gallery"
+              <div class="col-md-6 col-lg-4 project-item-box interior kitchen">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.4s"
+                  data-pswp-src="images/projects/4.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern Luxe Bedroom"
+                  onclick="openPhotoSwipe(this)"
                 >
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime3">
-                          <img
-                            src="images/projects/01_View04 copy.jpg"
-                            alt=""
-                          />
-                        </figure>
-                      </div>
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/4.jpg"
+                          alt="Modern Luxe Bedroom"
+                        />
+                      </figure>
                     </div>
                   </div>
-                </a>
-                <!-- Project Item End -->
+                  <div class="project-content">
+                    <h3>Modern Luxe Bedroom</h3>
+                    <h2>Elegant, cozy, neutral-toned sleeping space.</h2>
+                  </div>
+                </div>
               </div>
 
-              <div class="col-md-4 project-item-box kitchen bedroom">
-                <!-- Project Item Start -->
-                <a href="images/projects/213.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime3">
-                          <img src="images/projects/213.jpg" alt="" />
-                        </figure>
-                      </div>
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/216.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern Lounge Escape"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/216.jpg"
+                          alt="Modern Lounge Escape"
+                        />
+                      </figure>
                     </div>
                   </div>
-                </a>
-                <!-- Project Item End -->
+                  <div class="project-content">
+                    <h3>Modern Lounge Escape</h3>
+                    <h2>Bright, cozy, minimal swing space.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/366.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Sleek Modular Kitchen"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/366.jpg"
+                          alt="Sleek Modular Kitchen"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Sleek Modular Kitchen</h3>
+                    <h2>Clean lines, smart storage solution.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/01_View04 copy.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern TV Unit"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/01_View04 copy.jpg"
+                          alt="Modern TV Unit"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Modern TV Unit</h3>
+                    <h2>Sleek, minimal, functional wall design.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/213.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern Cozy Living"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/213.jpg"
+                          alt="Modern Cozy Living"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Modern Cozy Living</h3>
+                    <h2>Stylish, serene space with natural light.</h2>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- Project Item Boxes End -->
@@ -827,6 +899,63 @@
         </div>
       </div>
     </div>
+
+    <!-- PhotoSwipe HTML structure -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+            <button
+              class="pswp__button pswp__button--share"
+              title="Share"
+            ></button>
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Our Project End -->
 
     <!-- How We Work Start -->
@@ -979,7 +1108,7 @@
 
               <div class="our-skill-img-3">
                 <figure class="image-anime reveal">
-                  <img src="images/8.jpg" alt="" />
+                  <img src="images/480.jpg" alt="" />
                 </figure>
               </div>
             </div>
@@ -1035,7 +1164,8 @@
                 alt="logo"
             /></a>
             <p class="text-white mt-3 pe-5">
-              Explore stunning interior design solutions for every space.
+              Explore stunning interior design <br />
+              solutions for every space.
             </p>
           </div>
           <div class="col-12 col-lg-3 quick-links">
@@ -1296,7 +1426,7 @@
     </script>
 
     <!-- Lightbox -->
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
         lightbox.option({
           wrapAround: true,
@@ -1304,9 +1434,70 @@
           showImageNumberLabel: false,
           fitImagesInViewport: true,
           // 'positionFromTop': 300
+          keyboardNavigation: false  // This disables keyboard nav
         });
+
+  
+
+  
+  
+       
+
       });
+
+      
+    </script> -->
+
+    <!-- PhotoSwipe JavaScript -->
+    <script>
+      function openPhotoSwipe(clickedElement) {
+        // Get all gallery elements
+        const galleryElements = document.querySelectorAll("[data-pswp-src]");
+
+        // Find index of clicked element
+        let clickedIndex = 0;
+        for (let i = 0; i < galleryElements.length; i++) {
+          if (galleryElements[i] === clickedElement) {
+            clickedIndex = i;
+            break;
+          }
+        }
+
+        // Prepare items for PhotoSwipe
+        const items = [];
+        galleryElements.forEach((el) => {
+          items.push({
+            src: el.getAttribute("data-pswp-src"),
+            w: parseInt(el.getAttribute("data-pswp-width")),
+            h: parseInt(el.getAttribute("data-pswp-height")),
+            title: el.getAttribute("data-pswp-title"),
+          });
+        });
+
+        // Define options
+        const options = {
+          index: clickedIndex,
+          bgOpacity: 0.85,
+          showHideOpacity: true,
+          shareEl: false,
+          tapToClose: true,
+          tapToToggleControls: true,
+        };
+
+        // Initialize PhotoSwipe
+        const gallery = new PhotoSwipe(
+          document.querySelector(".pswp"),
+          PhotoSwipeUI_Default,
+          items,
+          options
+        );
+
+        gallery.init();
+      }
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();

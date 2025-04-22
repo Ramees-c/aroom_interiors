@@ -1457,6 +1457,8 @@ header.main-header .header-sticky.active .navbar {
     rgba(0, 0, 0, 0.467) 0%,
     rgba(0, 0, 0, 0.221) 111.33%
   );
+
+  cursor: pointer;
 }
 
 .project-featured-image figure img {
@@ -1547,7 +1549,10 @@ header.main-header .header-sticky.active .navbar {
   color: inherit;
 }
 
-
+/* Hide Lightbox2 arrows */
+.lb-prev, .lb-next {
+  display: none !important;
+}
 
 
 

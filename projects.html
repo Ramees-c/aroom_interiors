@@ -47,12 +47,21 @@
     <link href="css/custom.css" rel="stylesheet" media="screen" />
 
     <!-- Lightbox2 -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
       integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css"
     />
   </head>
 
@@ -163,159 +172,251 @@
           <div class="col-lg-12">
             <!-- Project Item Boxes start -->
             <div class="row project-item-boxes align-items-center">
-              <div class="col-md-4 project-item-box architecture bedroom">
-                <a
-                  href="images/projects/01_View12 copy.jpg"
-                  data-lightbox="image-gallery"
+              <!-- PhotoSwipe Gallery Items -->
+              <div
+                class="col-md-6 col-lg-4 project-item-box architecture bedroom"
+              >
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.2s"
+                  data-pswp-src="images/projects/01_View12 copy.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Contemporary Dining Elegance"
+                  onclick="openPhotoSwipe(this)"
                 >
-                  <!-- Project Item Start -->
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img
-                            src="images/projects/01_View12 copy.jpg"
-                            alt=""
-                          />
-                        </figure>
-                      </div>
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/01_View12 copy.jpg"
+                          alt="Contemporary Dining Elegance"
+                        />
+                      </figure>
                     </div>
                   </div>
-                  <!-- Project Item End -->
-                </a>
-              </div>
-              <div class="col-md-4 project-item-box interior kitchen">
-                <!-- Project Item Start -->
-                <a href="images/projects/4.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img src="images/projects/4.jpg" alt="" />
-                        </figure>
-                      </div>
-                    </div>
+                  <div class="project-content">
+                    <h3>Contemporary Dining Elegance</h3>
+                    <h2>Stylish, serene, marble-top dining area.</h2>
                   </div>
-                </a>
-                <!-- Project Item End -->
+                </div>
               </div>
 
-              <div class="col-md-4 project-item-box kitchen bedroom">
-                <!-- Project Item Start -->
-                <a href="images/projects/216.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img src="images/projects/216.jpg" alt="" />
-                        </figure>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <!-- Project Item End -->
-              </div>
-
-              <div class="col-md-4 project-item-box kitchen bedroom">
-                <!-- Project Item Start -->
-                <a href="images/projects/366.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img src="images/projects/366.jpg" alt="" />
-                        </figure>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <!-- Project Item End -->
-              </div>
-              <div class="col-md-4 project-item-box kitchen bedroom">
-                <!-- Project Item Start -->
-                <a
-                  href="images/projects/01_View04 copy.jpg"
-                  data-lightbox="image-gallery"
+              <div class="col-md-6 col-lg-4 project-item-box interior kitchen">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.4s"
+                  data-pswp-src="images/projects/4.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern Luxe Bedroom"
+                  onclick="openPhotoSwipe(this)"
                 >
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img
-                            src="images/projects/01_View04 copy.jpg"
-                            alt=""
-                          />
-                        </figure>
-                      </div>
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/4.jpg"
+                          alt="Modern Luxe Bedroom"
+                        />
+                      </figure>
                     </div>
                   </div>
-                </a>
-                <!-- Project Item End -->
+                  <div class="project-content">
+                    <h3>Modern Luxe Bedroom</h3>
+                    <h2>Elegant, cozy, neutral-toned sleeping space.</h2>
+                  </div>
+                </div>
               </div>
 
-              <div class="col-md-4 project-item-box kitchen bedroom">
-                <!-- Project Item Start -->
-                <a href="images/projects/213.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img src="images/projects/213.jpg" alt="" />
-                        </figure>
-                      </div>
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/216.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern Lounge Escape"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/216.jpg"
+                          alt="Modern Lounge Escape"
+                        />
+                      </figure>
                     </div>
                   </div>
-                </a>
-                <!-- Project Item End -->
-              </div>
-              <div class="col-md-4 project-item-box furniture">
-                <!-- Project Item Start -->
-                <a href="images/projects/136.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="1.2s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img src="images/projects/136.jpg" alt="" />
-                        </figure>
-                      </div>
-                    </div>
+                  <div class="project-content">
+                    <h3>Modern Lounge Escape</h3>
+                    <h2>Bright, cozy, minimal swing space.</h2>
                   </div>
-                </a>
-                <!-- Project Item End -->
-              </div>
-               <div class="col-md-4 project-item-box furniture">
-                <!-- Project Item Start -->
-                <a href="images/projects/722.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="1.2s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img src="images/projects/722.jpg" alt="" />
-                        </figure>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <!-- Project Item End -->
+                </div>
               </div>
 
-              <div class="col-md-4 project-item-box furniture">
-                <!-- Project Item Start -->
-                <a href="images/projects/174.jpg" data-lightbox="image-gallery">
-                  <div class="project-item wow fadeInUp" data-wow-delay="1.2s">
-                    <div class="project-image">
-                      <div class="project-featured-image">
-                        <figure class="image-anime">
-                          <img src="images/projects/174.jpg" alt="" />
-                        </figure>
-                      </div>
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/366.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Sleek Modular Kitchen"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/366.jpg"
+                          alt="Sleek Modular Kitchen"
+                        />
+                      </figure>
                     </div>
                   </div>
-                </a>
-                <!-- Project Item End -->
+                  <div class="project-content">
+                    <h3>Sleek Modular Kitchen</h3>
+                    <h2>Clean lines, smart storage solution.</h2>
+                  </div>
+                </div>
               </div>
 
-              
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/01_View04 copy.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern TV Unit"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/01_View04 copy.jpg"
+                          alt="Modern TV Unit"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Modern TV Unit</h3>
+                    <h2>Sleek, minimal, functional wall design.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/213.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern Cozy Living"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/213.jpg"
+                          alt="Modern Cozy Living"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Modern Cozy Living</h3>
+                    <h2>Stylish, serene space with natural light.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/136.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Elegant Bedroom Wardrobe"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/136.jpg"
+                          alt="Elegant Bedroom Wardrobe"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Elegant Bedroom Wardrobe</h3>
+                    <h2>Streamlined, sleek, modern storage solution.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/722.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Understairs Storage Solution"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/722.jpg"
+                          alt="Understairs Storage Solution"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Understairs Storage Solution</h3>
+                    <h2>Smart, stylish, space-saving design.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 project-item-box kitchen bedroom">
+                <div
+                  class="project-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-pswp-src="images/projects/174.jpg"
+                  data-pswp-width="1200"
+                  data-pswp-height="800"
+                  data-pswp-title="Modern Outdoor Oasis"
+                  onclick="openPhotoSwipe(this)"
+                >
+                  <div class="project-image">
+                    <div class="project-featured-image">
+                      <figure class="image-anime3">
+                        <img
+                          src="images/projects/174.jpg"
+                          alt="Modern Outdoor Oasis"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Modern Outdoor Oasis</h3>
+                    <h2>Stylish, serene patio with greenery.</h2>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- Project Item Boxes End -->
           </div>
@@ -341,6 +442,62 @@
     </div>
     <!-- Our Project End -->
 
+    <!-- PhotoSwipe HTML structure -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+            <button
+              class="pswp__button pswp__button--share"
+              title="Share"
+            ></button>
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer section start -->
     <footer>
       <div class="container">
@@ -353,7 +510,8 @@
                 alt="logo"
             /></a>
             <p class="text-white mt-3 pe-5">
-              Explore stunning interior design solutions for every space.
+              Explore stunning interior design <br />
+              solutions for every space.
             </p>
           </div>
           <div class="col-12 col-lg-3 quick-links">
@@ -473,18 +631,56 @@
       </div>
     </footer>
 
+    <!-- PhotoSwipe JavaScript -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        lightbox.option({
-          wrapAround: true,
-          disableScrolling: false,
-          showImageNumberLabel: false,
-          fitImagesInViewport: true,
-          // 'positionFromTop': 300
+      function openPhotoSwipe(clickedElement) {
+        // Get all gallery elements
+        const galleryElements = document.querySelectorAll("[data-pswp-src]");
+
+        // Find index of clicked element
+        let clickedIndex = 0;
+        for (let i = 0; i < galleryElements.length; i++) {
+          if (galleryElements[i] === clickedElement) {
+            clickedIndex = i;
+            break;
+          }
+        }
+
+        // Prepare items for PhotoSwipe
+        const items = [];
+        galleryElements.forEach((el) => {
+          items.push({
+            src: el.getAttribute("data-pswp-src"),
+            w: parseInt(el.getAttribute("data-pswp-width")),
+            h: parseInt(el.getAttribute("data-pswp-height")),
+            title: el.getAttribute("data-pswp-title"),
+          });
         });
-      });
+
+        // Define options
+        const options = {
+          index: clickedIndex,
+          bgOpacity: 0.85,
+          showHideOpacity: true,
+          shareEl: false,
+          tapToClose: true,
+          tapToToggleControls: true,
+        };
+
+        // Initialize PhotoSwipe
+        const gallery = new PhotoSwipe(
+          document.querySelector(".pswp"),
+          PhotoSwipeUI_Default,
+          items,
+          options
+        );
+
+        gallery.init();
+      }
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
