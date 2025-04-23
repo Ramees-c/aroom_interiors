@@ -2292,6 +2292,160 @@ footer .social-media .icon-container:hover {
 }
 
 /************************************/
+/***    17. Service Single css 	  ***/
+/************************************/
+
+.page-service-single{
+  padding: 100px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.service-feature-image{
+  margin-bottom: 40px;
+}
+
+.service-feature-image figure{
+  display: block;
+}
+
+.service-feature-image img{
+  width: 100%;
+  aspect-ratio: 1 / 0.55;
+  object-fit: cover;
+}
+
+.service-entry{
+  margin-bottom: 30px;
+}
+
+.service-entry h2{
+font-size: 46px;
+margin-bottom: 20px;
+}
+
+.service-entry h2 span{
+color: var(--accent-color);
+}
+
+.service-entry p{
+  margin-bottom: 20px;
+}
+
+.service-entry p:last-child{
+  margin-bottom: 0;
+}
+
+.service-entry ul{
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.service-entry ul li{
+position: relative;
+  font-weight: 500;
+  color: var(--text-color);
+text-transform: capitalize;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+
+.service-entry ul li:last-child{
+margin-bottom: 0;
+}
+
+.service-entry ul li::before{
+  content: '\f058';
+  position: absolute;
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  font-weight: 900;
+  line-height: normal;
+  color: var(--accent-color);
+  display: inline-block;
+  top: 2px;
+  left: 0;
+}
+
+.service-entry-list-image{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 30px;
+margin-top: 50px;
+}
+
+.service-entry-image,
+.service-entry-list{
+width: calc(50% - 15px);
+}
+
+.service-entry-image figure{
+display: block;
+}
+
+.service-entry-image img{
+width: 100%;
+aspect-ratio: 1 / 0.615;
+object-fit: cover;
+}
+
+.service-entry-list ul{
+margin-bottom: 0;
+}
+
+
+
+
+/************************************/
 /***     18. Blog Archive css 	  ***/
 /************************************/
 
@@ -3414,43 +3568,9 @@ footer .social-media .icon-container:hover {
     padding: 50px 0;
   }
 
-  .service-sidebar {
-    position: initial;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
 
-  .service-catagery-list {
-    padding: 20px;
-    margin-bottom: 30px;
-  }
 
-  .service-catagery-list h3 {
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-  }
-
-  .service-catagery-list ul li {
-    margin-bottom: 10px;
-  }
-
-  .service-catagery-list ul li a::before {
-    width: 16px;
-    height: 16px;
-  }
-
-  .sidebar-cta-Body {
-    padding: 20px;
-  }
-
-  .sidebar-cta-content {
-    margin-bottom: 15px;
-  }
-
-  .sidebar-cta-contact-item {
-    margin-bottom: 15px;
-  }
-
+  
   .service-feature-image {
     margin-bottom: 30px;
   }
@@ -3919,13 +4039,7 @@ footer .social-media .icon-container:hover {
     aspect-ratio: 1 / 1.26;
   }
 
-  .service-catagery-list h3 {
-    font-size: 18px;
-  }
-
-  .sidebar-cta-content h3 {
-    font-size: 18px;
-  }
+  
 
   .service-entry p {
     margin-bottom: 15px;
