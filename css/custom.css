@@ -117,50 +117,50 @@ body {
 
 .image-anime2::before {
   position: absolute;
-	top: 50%;
-	left: 50%;
-	z-index: 2;
-	display: block;
-	content: '';
-	width: 0;
-	height: 0;
-	background: rgba(255,255,255,.2);
-	border-radius: 100%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	opacity: 0;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .image-anime2:hover::before {
   -webkit-animation: circle 1s;
-	animation: circle 1s;
+  animation: circle 1s;
 }
 
 @-webkit-keyframes circle {
-	0% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		width: 200%;
-		height: 200%;
-		opacity: 0;
-	}
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
 @keyframes circle {
-	0% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		width: 200%;
-		height: 200%;
-		opacity: 0;
-	}
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
 
 .reveal {
@@ -516,7 +516,7 @@ header.main-header .header-sticky.active .navbar {
   font-size: 18px;
   font-weight: 800;
   padding: 15px 14px !important;
-  color: var(--text-color);
+  color: var(--primary-color);
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
 }
@@ -1550,11 +1550,10 @@ header.main-header .header-sticky.active .navbar {
 }
 
 /* Hide Lightbox2 arrows */
-.lb-prev, .lb-next {
+.lb-prev,
+.lb-next {
   display: none !important;
 }
-
-
 
 /************************************/
 /***      10. How We Work css     ***/
@@ -1813,9 +1812,7 @@ header.main-header .header-sticky.active .navbar {
   margin-bottom: 20px;
 }
 
-.post-featured-image a {
-  cursor: none;
-}
+
 
 .post-featured-image figure,
 .post-featured-image a {
@@ -1831,6 +1828,7 @@ header.main-header .header-sticky.active .navbar {
 
 .post-item:hover .post-featured-image img {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .post-item-content {
@@ -2295,117 +2293,68 @@ footer .social-media .icon-container:hover {
 /***    17. Service Single css 	  ***/
 /************************************/
 
-.page-service-single{
+.page-service-single {
   padding: 100px 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.service-feature-image{
+.service-feature-image {
   margin-bottom: 40px;
 }
 
-.service-feature-image figure{
+.service-feature-image figure {
   display: block;
 }
 
-.service-feature-image img{
+.service-feature-image img {
   width: 100%;
   aspect-ratio: 1 / 0.55;
   object-fit: cover;
 }
 
-.service-entry{
+.service-entry {
   margin-bottom: 30px;
 }
 
-.service-entry h2{
-font-size: 46px;
-margin-bottom: 20px;
-}
-
-.service-entry h2 span{
-color: var(--accent-color);
-}
-
-.service-entry p{
+.service-entry h2 {
+  font-size: 46px;
   margin-bottom: 20px;
 }
 
-.service-entry p:last-child{
+.service-entry h2 span {
+  color: var(--accent-color);
+}
+
+.service-entry p {
+  margin-bottom: 20px;
+}
+
+.service-entry p:last-child {
   margin-bottom: 0;
 }
 
-.service-entry ul{
+.service-entry ul {
   list-style: none;
   margin-bottom: 20px;
   padding: 0;
 }
 
-.service-entry ul li{
-position: relative;
+.service-entry ul li {
+  position: relative;
   font-weight: 500;
   color: var(--text-color);
-text-transform: capitalize;
+  text-transform: capitalize;
   padding-left: 30px;
   margin-bottom: 15px;
 }
 
-.service-entry ul li:last-child{
-margin-bottom: 0;
+.service-entry ul li:last-child {
+  margin-bottom: 0;
 }
 
-.service-entry ul li::before{
-  content: '\f058';
+.service-entry ul li::before {
+  content: "\f058";
   position: absolute;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   font-size: 20px;
   font-weight: 900;
   line-height: normal;
@@ -2415,35 +2364,32 @@ margin-bottom: 0;
   left: 0;
 }
 
-.service-entry-list-image{
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-gap: 30px;
-margin-top: 50px;
+.service-entry-list-image {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .service-entry-image,
-.service-entry-list{
-width: calc(50% - 15px);
+.service-entry-list {
+  width: calc(50% - 15px);
 }
 
-.service-entry-image figure{
-display: block;
+.service-entry-image figure {
+  display: block;
 }
 
-.service-entry-image img{
-width: 100%;
-aspect-ratio: 1 / 0.615;
-object-fit: cover;
+.service-entry-image img {
+  width: 100%;
+  aspect-ratio: 1 / 0.615;
+  object-fit: cover;
 }
 
-.service-entry-list ul{
-margin-bottom: 0;
+.service-entry-list ul {
+  margin-bottom: 0;
 }
-
-
-
 
 /************************************/
 /***     18. Blog Archive css 	  ***/
@@ -3262,7 +3208,7 @@ margin-bottom: 0;
   }
 
   .video-section {
-    padding: 20px 0;
+    padding: 80px 0;
   }
 
   .video-section .fullscreen-video-carousel {
@@ -3568,9 +3514,6 @@ margin-bottom: 0;
     padding: 50px 0;
   }
 
-
-
-  
   .service-feature-image {
     margin-bottom: 30px;
   }
@@ -4039,8 +3982,6 @@ margin-bottom: 0;
     aspect-ratio: 1 / 1.26;
   }
 
-  
-
   .service-entry p {
     margin-bottom: 15px;
   }
@@ -4295,8 +4236,6 @@ margin-bottom: 0;
     width: 30px;
     height: 30px;
   }
-
- 
 }
 
 /* WhatsApp Icon Styles */
