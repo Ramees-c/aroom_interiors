@@ -2451,8 +2451,9 @@ footer .social-media .icon-container:hover {
 
 .post-image figure,
 .post-image img {
-  aspect-ratio: 1 / 0.5;
+  /* aspect-ratio: 1 / 0.5; */
   object-fit: cover;
+  height: 100%;
 }
 
 .post-content {
