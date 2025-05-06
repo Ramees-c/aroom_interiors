@@ -277,21 +277,25 @@
               <li class="text-white ms-4 mb-2">Pin 670501</li>
 
               <li class="text-white fs-6">
-                <i class="fa-solid fa-phone-volume me-2"></i
-                ><a
+                <i class="fa-solid fa-phone-volume me-2"></i>
+                <a
                   href="tel:+917797000020"
-                  class="text-decoration-none fw-bold"
-                  >+91 7797 0000 20</a
+                  class="text-decoration-none fw-bold phone-link"
+                  data-number="917797000020"
                 >
+                  +91 7797 0000 20
+                </a>
               </li>
 
               <li class="text-white fs-6">
-                <i class="fa-solid fa-phone-volume me-2"></i
-                ><a
+                <i class="fa-solid fa-phone-volume me-2"></i>
+                <a
                   href="tel:+919633005700"
-                  class="text-decoration-none fw-bold"
-                  >+91 9633 0057 00</a
+                  class="text-decoration-none fw-bold phone-link"
+                  data-number="919633005700"
                 >
+                  +91 9633 0057 00
+                </a>
               </li>
               <li class="text-white fs-6 mt-2">
                 <i class="fa-regular fa-envelope me-2"></i
@@ -338,7 +342,7 @@
               <!-- Footer Copyright Start -->
               <div class="footer-copyright-text">
                 <p>
-                  Copyright ©<span id="year"></span> aroominteriors, All Rights
+                  Copyright © <span id="year"></span> aroominteriors, All Rights
                   Reserved. |
                   <a href="http://www.dhanwis.com/" target="_blank"
                     >Design By Dhanwis Techinfo Solutions.</a
@@ -354,6 +358,65 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- contact number -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const phoneLinks = document.querySelectorAll(".phone-link");
+
+        // Enhanced device detection
+        function shouldTriggerCall() {
+          const userAgent = navigator.userAgent;
+          const isFoldable = /Zenbook[ _]Fold|Surface[ _]Duo/i.test(userAgent);
+
+          // Standard mobile devices
+          if (
+            /Android|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              userAgent
+            )
+          ) {
+            // Exclude tablets and foldables that might report as mobile but can't call
+            if (/iPad|tablet|Zenbook[ _]Fold|Surface[ _]Duo/i.test(userAgent)) {
+              return false;
+            }
+            return true;
+          }
+
+          // Special case for foldables in phone mode
+          if (isFoldable) {
+            // Check if device is in phone mode (simplified check)
+            const isPhoneMode = window.innerWidth <= 768;
+            return isPhoneMode;
+          }
+
+          return false;
+        }
+
+        phoneLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            if (shouldTriggerCall()) {
+              // Allow default tel: behavior for true mobile devices
+              return true;
+            } else {
+              // Redirect to WhatsApp for all other cases
+              e.preventDefault();
+              const number = link.getAttribute("data-number");
+              window.open(`https://wa.me/${number}`, "_blank");
+            }
+          });
+
+          // Optional: Add visual feedback on hover for desktop
+          if (!shouldTriggerCall()) {
+            link.style.cursor = "pointer";
+            link.title = "Chat on WhatsApp";
+          }
+        });
+      });
+    </script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
